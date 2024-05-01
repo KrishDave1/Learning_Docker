@@ -3,6 +3,7 @@
 ### Before Docker
 1. Installation process different on each OS environment
 2. If there are 10 services then there are many steps where something could go wrong
+3. 
 
 ### With Docker
 1. Own isolated environment
