@@ -26,6 +26,8 @@ docker pull <image-name>:<tag> - pull the image from the Docker Registry
 docker run <image-name>:<tag> - run the image and create the container.If not found locally, it will pull the image from the Docker Registry.
 <br />
 docker run --name <Name container> -d -p 8080:80 <image-name>:<tag> - run the image in the background(detach mode) and map the port 8080 of the host machine to the port 80 of the container.Standard is to use same port number for host and container.
+<br />
+docker images -a -q | % { docker image rm $_ -f } - Delete all images on a machine.
 
 Base image - It is the image that we use as the base for our image. For example, if we want to create an image for our application, we can use the base image like Ubuntu, Alpine, etc.
 Basically if I want to run a Java application, I will use the base image as OpenJDK or Oracle JDK. If I want to run a Node.js application, I will use the base image as Node.js, etc. to have those dependecies pre-installed in the image.
